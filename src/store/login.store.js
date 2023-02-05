@@ -13,8 +13,13 @@ class LoginStore {
             mobile,
             code
         })
-        this.token = res.data.token
-        setToken(res.data.token)
+        this.token = res.token
+        setToken(res.token)
+    }
+    // 退出
+    loginOut = () => {
+        this.token = ''
+        clearToken()
     }
 }
 export default LoginStore
