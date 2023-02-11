@@ -28,9 +28,9 @@ http.interceptors.response.use((response) => {
     // 对响应错误做点什么
     if (error.response.status === 401) {
         // 删除token
-        clearToken()
-        // 跳转到登录页
-        history.push('/login')
+        // clearToken()
+        // // 跳转到登录页
+        // history.push('/login')
     }
     return Promise.reject(error)
 })
